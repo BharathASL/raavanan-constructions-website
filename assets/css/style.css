@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
   background-color: #efefef;
+  font-family: "Roboto", sans-serif;
 }
 
 nav {
@@ -22,13 +24,35 @@ nav {
 }
 .hover-show-phone:hover {
   background-color: #ff8b07;
-  width: 250px;
 }
 .hover-show-phone:hover > .text {
   display: none;
 }
 .hover-show-phone:hover > .phone {
   display: block;
+}
+
+.navigations {
+  display: grid;
+  text-align: center;
+}
+.navigations .card img {
+  max-width: 25rem;
+  height: 25rem;
+  object-fit: cover;
+}
+.navigations > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 25rem);
+  gap: 2.5rem;
+  overflow: auto;
+  justify-content: space-evenly;
+}
+.navigations a {
+  text-decoration: none;
+}
+.navigations a .card-text {
+  color: #000000;
 }
 
 /*# sourceMappingURL=style.css.map */

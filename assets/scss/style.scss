@@ -1,7 +1,10 @@
 @import "variables";
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 body {
     background-color: #efefef;
+    font-family: "Roboto", sans-serif;
 }
 
 nav {
@@ -26,13 +29,40 @@ nav {
 
     &:hover {
         background-color: #ff8b07;
-        width: 250px;
+        // width: 250px;
 
         > .text {
             display: none;
         }
         > .phone {
             display: block;
+        }
+    }
+}
+
+$navigations-card-width: 25rem;
+
+.navigations {
+    display: grid;
+    text-align: center;
+    .card {
+        img {
+            max-width: $navigations-card-width;
+            height: $navigations-card-width;
+            object-fit: cover;
+        }
+    }
+    > div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, $navigations-card-width);
+        gap: $navigations-card-width / 10;
+        overflow: auto;
+        justify-content: space-evenly;
+    }
+    a {
+        text-decoration: none;
+        .card-text {
+            color: #000000;
         }
     }
 }

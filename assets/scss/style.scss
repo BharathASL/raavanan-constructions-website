@@ -10,6 +10,13 @@ body {
 nav {
     background-color: #e3f2fd;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    h1 {
+        color: #ff8b07;
+    }
+}
+
+.footer-container {
+    background-color: #e3f2fd;
 }
 
 .highlight-text {
@@ -65,4 +72,9 @@ $navigations-card-width: 25rem;
             color: #000000;
         }
     }
+}
+
+.gmap-container > iframe {
+    width: inherit;
+    height: 1000px;
 }

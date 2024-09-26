@@ -1,0 +1,34 @@
+body {
+  background-color: #efefef;
+}
+
+nav {
+  background-color: #e3f2fd;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.highlight-text {
+  color: #ecff8e;
+  text-shadow: 0 0 4px #000000;
+}
+
+.highlight-text2 {
+  color: white;
+  text-shadow: 0 0 1px #ecff8e;
+}
+
+.hover-show-phone > .phone {
+  display: none;
+}
+.hover-show-phone:hover {
+  background-color: #ff8b07;
+  width: 250px;
+}
+.hover-show-phone:hover > .text {
+  display: none;
+}
+.hover-show-phone:hover > .phone {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */

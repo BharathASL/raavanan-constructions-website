@@ -15,6 +15,12 @@ nav {
     }
 }
 
+#carouselIndicators {
+    img {
+        height: 500px;
+    }
+}
+
 .footer-container {
     background-color: #e3f2fd;
 }
@@ -71,6 +77,12 @@ $navigations-card-width: 25rem;
         .card-text {
             color: #000000;
         }
+    }
+}
+
+#ContactUs {
+    > div:first-of-type {
+        text-align: center;
     }
 }
 

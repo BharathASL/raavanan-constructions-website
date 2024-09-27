@@ -12,6 +12,10 @@ nav h1 {
   color: #ff8b07;
 }
 
+#carouselIndicators img {
+  height: 500px;
+}
+
 .footer-container {
   background-color: #e3f2fd;
 }
@@ -60,6 +64,10 @@ nav h1 {
 }
 .navigations a .card-text {
   color: #000000;
+}
+
+#ContactUs > div:first-of-type {
+  text-align: center;
 }
 
 .gmap-container > iframe {

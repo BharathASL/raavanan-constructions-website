@@ -7,11 +7,49 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+#offcanvasLabel,
+nav h1 {
+    color: #ff8b07;
+}
+
 nav {
     background-color: #e3f2fd;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-    h1 {
-        color: #ff8b07;
+
+    /* Mobile - Target screens up to 576px wide */
+    @media (max-width: 576px) {
+        .logo {
+            width: 50px;
+        }
+        .logo + h1 {
+            font-size: 20px;
+        }
+    }
+
+    /* Tablet - Target screens between 577px and 768px wide */
+    @media (min-width: 577px) and (max-width: 768px) {
+    }
+
+    /* Desktop - Target screens between 769px and 992px wide */
+    @media (min-width: 769px) and (max-width: 992px) {
+    }
+
+    /* Large Desktop - Target screens 993px and above */
+    @media (min-width: 993px) {
+        [data-bs-toggle="offcanvas"] {
+            display: none;
+        }
+    }
+}
+
+footer {
+    justify-content: center;
+}
+
+@media (max-width: 993px) {
+    footer {
+        text-align: center;
+        justify-content: center;
     }
 }
 
@@ -68,7 +106,7 @@ $navigations-card-width: 25rem;
     > div {
         display: grid;
         grid-template-columns: repeat(auto-fit, $navigations-card-width);
-        gap: $navigations-card-width / 10;
+        gap: calc($navigations-card-width / 10);
         overflow: auto;
         justify-content: space-evenly;
     }
@@ -89,4 +127,7 @@ $navigations-card-width: 25rem;
 .gmap-container > iframe {
     width: inherit;
     height: 1000px;
+}
+
+.last-line {
 }

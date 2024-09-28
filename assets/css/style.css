@@ -4,14 +4,43 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-nav {
-  background-color: #e3f2fd;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-}
+#offcanvasLabel,
 nav h1 {
   color: #ff8b07;
 }
 
+nav {
+  background-color: #e3f2fd;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  /* Mobile - Target screens up to 576px wide */
+  /* Tablet - Target screens between 577px and 768px wide */
+  /* Desktop - Target screens between 769px and 992px wide */
+  /* Large Desktop - Target screens 993px and above */
+}
+@media (max-width: 576px) {
+  nav .logo {
+    width: 50px;
+  }
+  nav .logo + h1 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 993px) {
+  nav [data-bs-toggle=offcanvas] {
+    display: none;
+  }
+}
+
+footer {
+  justify-content: center;
+}
+
+@media (max-width: 993px) {
+  footer {
+    text-align: center;
+    justify-content: center;
+  }
+}
 #carouselIndicators img {
   height: 500px;
 }

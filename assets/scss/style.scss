@@ -19,10 +19,23 @@ nav h1 {
 nav {
     background-color: #e3f2fd;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    justify-content: left;
+    // align-items: baseline !important;
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+    justify-content: flex-start !important;
+    height: 150px;
+
+    .logo {
+        height: 35px;
+        vertical-align: baseline !important;
+    }
 
     /* Mobile - Target screens up to 576px wide */
     @media (max-width: 576px) {
         .logo {
+            height: unset;
             width: 50px;
         }
         .logo + h1 {
@@ -135,30 +148,31 @@ $navigations-card-width: 25rem;
 
 .footer-container {
     position: relative;
-    .developer-credits {
-        padding: 25px 25px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        color: green !important;
-        display: grid;
-        flex-direction: column;
-        justify-items: end;
-        a {
-            color: green !important;
-        }
-        .social {
-            display: grid;
-            width: fit-content;
-            justify-items: end;
-        }
+}
 
-        @media (max-width: 993px) {
-            position: unset;
+.developer-credits {
+    padding: 25px 25px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: green !important;
+    display: grid;
+    flex-direction: column;
+    justify-items: end;
+    a {
+        color: green !important;
+    }
+    .social {
+        display: grid;
+        width: fit-content;
+        justify-items: end;
+    }
+
+    @media (max-width: 993px) {
+        position: unset;
+        justify-items: center;
+        .social {
             justify-items: center;
-            .social {
-                justify-items: center;
-            }
         }
     }
 }

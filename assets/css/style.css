@@ -16,13 +16,24 @@ nav h1 {
 nav {
   background-color: #e3f2fd;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  justify-content: left;
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+  justify-content: flex-start !important;
+  height: 150px;
   /* Mobile - Target screens up to 576px wide */
   /* Tablet - Target screens between 577px and 768px wide */
   /* Desktop - Target screens between 769px and 992px wide */
   /* Large Desktop - Target screens 993px and above */
 }
+nav .logo {
+  height: 35px;
+  vertical-align: baseline !important;
+}
 @media (max-width: 576px) {
   nav .logo {
+    height: unset;
     width: 50px;
   }
   nav .logo + h1 {
@@ -111,7 +122,8 @@ footer {
 .footer-container {
   position: relative;
 }
-.footer-container .developer-credits {
+
+.developer-credits {
   padding: 25px 25px;
   position: absolute;
   bottom: 0;
@@ -121,20 +133,20 @@ footer {
   flex-direction: column;
   justify-items: end;
 }
-.footer-container .developer-credits a {
+.developer-credits a {
   color: green !important;
 }
-.footer-container .developer-credits .social {
+.developer-credits .social {
   display: grid;
   width: fit-content;
   justify-items: end;
 }
 @media (max-width: 993px) {
-  .footer-container .developer-credits {
+  .developer-credits {
     position: unset;
     justify-items: center;
   }
-  .footer-container .developer-credits .social {
+  .developer-credits .social {
     justify-items: center;
   }
 }

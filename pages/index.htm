@@ -496,7 +496,9 @@
                                                 <p class="mb-0">
                                                     <a class="link-secondary text-decoration-none"
                                                         href="tel:+917094340092"><span class="fw-bold">Sudhan :</span>
-                                                        +91 709 434 0092</a>
+                                                        +91 709 434 0092<br>
+                                                        <i>(Proprietor)</i>
+                                                    </a>
                                                 </p>
                                             </div>
                                         </div>
@@ -628,18 +630,33 @@
                     <li class="nav-item mb-2 nav-link p-0 text-muted">Mannarpuram Junction,</li>
                     <li class="nav-item mb-2 nav-link p-0 text-muted">Mannarpuram, Tamilnadu - 627657</li>
                     <a class="text-decoration-none" href="mailto:sudhanchinna0708@gmail.com">
-                        <li class="nav-item mb-2 nav-link p-0 text-muted">sudhanchinna0708@gmail.com</li>
+                        <li class="nav-item mb-2 nav-link p-0 text-muted"><i class="fa-regular fa-envelope"></i>
+                            sudhanchinna0708@gmail.com</li>
                     </a>
                     <a class="text-decoration-none" href="tel:+917094340092">
-                        <li class="nav-item mb-2 nav-link p-0 text-muted"><i class="fa-solid fa-phone"></i> (Sudhan):
-                            +917094340092</li>
+                        <li class="nav-item mb-2 nav-link p-0 text-muted"><i class="fa-solid fa-phone"></i> +91 709 434
+                            0092 (Sudhan)</li>
                     </a>
                 </ul>
             </div>
         </footer>
-        <div class="last-line">
-            <p class="text-muted text-center">© 2024 Raavan Constructions. All rights reserved.</p>
-            <!-- <p class="text-muted text-center">Meet the developer</p> -->
+        <p class="text-muted text-center">© 2024 Raavan Constructions. All rights reserved.</p>
+        <div class="developer-credits mb-1">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i>Developed by</i>
+                <span class="h5">Bharath</span>
+            </a>
+            <div class="social">
+                <a href="tel:+917418570384">
+                    <spn>+91 741 857 0384</spn> <i class="fa-solid fa-phone"></i>
+                </a>
+                <a href="https://www.instagram.com/bharath.asl/" target="_blank" rel="noopener noreferrer">
+                    <spn>bharath.asl</spn> <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="mailto:bharathasl74185@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <spn>bharathasl74185@gmail.com</spn> <i class="fa-regular fa-envelope"></i>
+                </a>
+            </div>
         </div>
     </div>
     <!-- Bootstrap JS -->
@@ -677,6 +694,20 @@
                 $(".modal-backdrop").remove();
                 $("body").css({ 'overflow': '', 'padding-right': '' });
                 reinitializeOffcanvas();
+            });
+
+
+            $('a[href^="#"]').on('click', function (event) {
+                event.preventDefault(); // Prevent default anchor click behavior
+                var target = this.hash; // Get the target section
+                var $target = $(target);
+
+                // Scroll to the target section with an extra offset
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top - 150 // Adjust the offset as needed (e.g., 80px)
+                }, 300, 'swing', function () {//Delay
+                    window.location.hash = target; // Change the URL hash
+                });
             });
         });
     </script>
